@@ -1,5 +1,9 @@
 #include <stdio.h>
 #include <assert.h>
+int batteryTemperatureIsOk(float temperature);
+int batterySOCOk(float soc);
+int batteryChargeRateOk(float chargeRate);
+int batteryIsOk(float temperature, float soc, float chargeRate);
 
 int batteryIsOk(float temperature, float soc, float chargeRate) {
   if(batteryTemperatureIsOk(temperature)) {
