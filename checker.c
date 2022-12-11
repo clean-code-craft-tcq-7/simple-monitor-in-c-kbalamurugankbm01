@@ -6,13 +6,13 @@ int batteryChargeRateOk(float chargeRate);
 int batteryIsOk(float temperature, float soc, float chargeRate);
 
 int batteryIsOk(float temperature, float soc, float chargeRate) {
-  if(batteryTemperatureIsOk(temperature)) {
+  if(batteryTemperatureIsOk(!temperature)) {
     printf("Temperature out of range!\n");
     return 0;
-  } else if(batterySOCOk(soc)) {
+  } else if(batterySOCOk(!soc)) {
     printf("State of Charge out of range!\n");
     return 0;
-  } else if(batteryChargeRateOk(chargeRate)) {
+  } else if(batteryChargeRateOk(!chargeRate)) {
     printf("Charge Rate out of range!\n");
     return 0;
   }
