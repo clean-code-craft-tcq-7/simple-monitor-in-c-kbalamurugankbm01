@@ -7,8 +7,8 @@ extern int batteryTemperatureIsOk(float temperature);
 extern int batterySOCOk(float soc);
 extern int batteryChargeRateOk(float chargeRate);
 
-extern void printBatteryTemperatureWarning(void);
-extern void printBatterySOCWarning(void);
+extern void printBatteryTemperatureWarning(float temperature);
+extern void printBatterySOCWarning(float soc);
 extern void printBatteryChargeRateWarning(void);
 
 #endif //CHECKER_H
