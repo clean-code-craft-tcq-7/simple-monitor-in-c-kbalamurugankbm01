@@ -7,10 +7,10 @@ int batteryIsOk(float temperature, float soc, float chargeRate);
 
 int batteryIsOk(float temperature, float soc, float chargeRate) {
   int batteryIsOk_bool = 0;
-  
+
   batteryIsOk_bool = batteryTemperatureIsOk(temperature);
   batteryIsOk_bool &&= batterySOCOk(soc);
-  batteryIsOk_bool &&= batteryChargeRateOk(chargeRate)
+  batteryIsOk_bool &&= batteryChargeRateOk(chargeRate);
 
   return batteryIsOk_bool;
 }
