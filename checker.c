@@ -1,9 +1,5 @@
 #include <stdio.h>
-#include <assert.h>
-int batteryTemperatureIsOk(float temperature);
-int batterySOCOk(float soc);
-int batteryChargeRateOk(float chargeRate);
-int batteryIsOk(float temperature, float soc, float chargeRate);
+#include <checker.h>
 
 int batteryIsOk(float temperature, float soc, float chargeRate) {
   int batteryIsOk_bool = 0;
@@ -35,7 +31,7 @@ int batteryChargeRateOk(float chargeRate) {
   return 1;
 }
 
-int printBatteryChargeRateWarning(float chargeRate){
+int printBatteryChargeRateWarning(float chargeRate) {
   if (batteryChargeRateOk(chargeRate) == 0) {
     printf("Charge Rate out of range!\n");
   }
@@ -43,7 +39,7 @@ int printBatteryChargeRateWarning(float chargeRate){
 }
 
 
-int printBatteryTemperatureWarning(float temperature){
+int printBatteryTemperatureWarning(float temperature) {
   if(batteryTemperatureIsOk(temperature) == 0){
     printf("Temperature out of range!\n");
   }
@@ -51,14 +47,10 @@ int printBatteryTemperatureWarning(float temperature){
 }
 
 
-int printBatterySOCWarning(float soc){
+int printBatterySOCWarning(float soc) {
   if(batterySOCOk(soc) == 0){
     printf("State of Charge out of range!\n");
   }
 
 }
 
-int main() {
-  assert(batteryIsOk(25, 70, 0.7));
-  assert(!batteryIsOk(50, 85, 0));
-}
