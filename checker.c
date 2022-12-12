@@ -53,5 +53,5 @@ void printBatterySOCWarning(float soc) {
 }
 
 void printBatteryChargeRateWarning(void) {
-  printf("Charge Rate out of range!\n");  
+  printf("Charge Rate out of range!: HIGH\n");  
 }
