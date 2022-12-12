@@ -1,5 +1,5 @@
 #include <assert.h>
-#include <checker.h>
+#include "checker.h"
 
 int main() {
   assert(batteryIsOk(25, 70, 0.7));
